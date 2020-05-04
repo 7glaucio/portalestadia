@@ -1,0 +1,79 @@
+#header {
+    margin: 20px;
+}
+
+#menu {
+    justify-content: end;
+    font-size: 125%;
+}
+
+#socialTopo{
+    margin-right: -240px;
+    margin-top: -2px;
+    float: right;
+}
+
+#RedeSocialTopo{
+    max-width: 9%;
+    animation-name: rodaSocial;
+    animation-duration: 1s;  
+  }
+
+  @keyframes rodaSocial {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+.carousel-caption > p {
+    font-size: 140%;
+}
+
+.carousel-caption > h4 {
+    font-size: 200%;
+}
+
+#barraPesquisa {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#footer {
+    flex: auto;
+    background-color: #666666;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    align-items: center;
+    border-top: 2px solid orange;
+}
+
+#socialRodape{
+    margin-right: -160px;
+    margin-top: 8px;
+    float: right;
+}
+
+#RedeSocialRodape{
+    max-width: 9%;  
+}
+
+#linksFooter > a:link {
+    color: white;
+}
+
+#copyright {
+    background-color: #0275D8;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-size: 95%;
+    text-decoration: none;
+}
+
