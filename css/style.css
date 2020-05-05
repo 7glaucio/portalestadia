@@ -1,3 +1,5 @@
+/* TOPO DO SITE */
+
 #header {
     margin: 20px;
 }
@@ -30,6 +32,8 @@
     }
   }
 
+/* BANNERS CARROSSEL */
+
 .carousel-caption > p {
     font-size: 140%;
 }
@@ -38,12 +42,180 @@
     font-size: 200%;
 }
 
+/* BARRA DE PESQUISA DE HOSPEDAGEM */
+
 #barraPesquisa {
     margin-left: 20px;
     margin-right: 20px;
 }
 
+.form-inline{
+    box-shadow: lightgray 1px 1px 8px;
+}
+
+#pesquisarCidade {
+    margin-left: -2px;
+}
+
+/* CARDS DE IMÓVEIS */
+
+#cardTodos {
+    margin-top: 20px;
+}
+
+#cardCompleto {
+}
+
+#photo > img {
+    max-width: 100%;
+}
+
+/* ANIMAÇÃO DA FOTO */ 
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,700;);
+.snip1585 {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin: 0px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+  margin-bottom: -6px;
+}
+
+.snip1585 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1585:before,
+.snip1585:after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 50px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 50px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.snip1585:before {
+  -webkit-transform: scaleY(2);
+  transform: scaleY(2);
+}
+
+.snip1585:after {
+  -webkit-transform: scaleY(2);
+  transform: scaleY(2);
+}
+
+.snip1585 img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+
+.snip1585 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.snip1585 h3 {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.snip1585 h3 span {
+  display: block;
+  font-weight: 700;
+}
+
+.snip1585 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.snip1585:hover > img,
+.snip1585.hover > img {
+  opacity: 0.7;
+}
+
+.snip1585:hover:before,
+.snip1585.hover:before,
+.snip1585:hover:after,
+.snip1585.hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.snip1585:hover figcaption,
+.snip1585.hover figcaption {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* FIM DA ANIMAÇÃO DA FOTO */ 
+
+#name {
+    background-color: #0275D8;
+    color: white;
+}
+
+#property_type {   
+}
+
+#property_type > p {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#price {
+    background-color: #0275D8;
+    color: white;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+
+/* RODAPÉ E COPYRIGHT */
 #footer {
+    margin-top: 20px;
     flex: auto;
     background-color: #666666;
     color: white;
@@ -54,6 +226,7 @@
 }
 
 #socialRodape{
+    padding-top: 8px;
     margin-right: -160px;
     margin-top: 8px;
     float: right;
@@ -72,7 +245,7 @@
     color: white;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 5px;
+    padding: 10px;
     font-size: 95%;
     text-decoration: none;
 }
