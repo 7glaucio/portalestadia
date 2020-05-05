@@ -6,11 +6,24 @@
 
 #menu {
     justify-content: end;
-    font-size: 125%;
+    font-size: 120%;
+    margin-bottom: -10px;
+}
+
+.nav {
+    margin-bottom: 8px;
+}
+
+#slogan {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 105%;
+    margin-left: 10px;
+    font-style: italic;
 }
 
 #socialTopo{
-    margin-right: -240px;
+    margin-right: -210px;
     margin-top: -2px;
     float: right;
 }
@@ -61,9 +74,6 @@
 
 #cardTodos {
     margin-top: 20px;
-}
-
-#cardCompleto {
 }
 
 #photo > img {
@@ -195,9 +205,6 @@
 #name {
     background-color: #0275D8;
     color: white;
-}
-
-#property_type {   
 }
 
 #property_type > p {
