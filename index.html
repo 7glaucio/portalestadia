@@ -114,7 +114,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h3 class="text-primary" align="center">
-						Filtre os resultados de acordo com o local, e selecione as datas para ver o valor estimado
+						Exiba os resultados ordenados de acordo com o filtro mais adequado para sua pesquisa
 					</h3>
 				</div>
 			</div><br>
@@ -155,6 +155,29 @@
 		</div>
 		<br>
 		<!--- FIM DA BARRA DE PESQUISA -->
+
+		<div class="row">
+			<div class="col-md-12 info__orders" align="center">
+			  <button class="info__orders--button" onclick="ordemAlfabetica()">
+				Por Ordem Alfabética
+			  </button>
+	
+			  <button class="info__orders--button" onclick="orderByType()">
+				Por Tipo de Propriedade
+			  </button>
+	
+			  <button class="info__orders--button" onclick="orderByPriceCrescent()">
+				Pelo Menor Valor
+			  </button>
+	
+			  <input
+				id="searchInput"
+				class="info__orders--button"
+				onkeyup="handleSearch()"
+				placeholder="Pesquisar pelo título"
+			  />
+			</div>
+		  </div>
 
 		<!--- INÍCIO DOS CARDS DE ANÚNCIOS -->
 		<div class="row cardTodos" id="cardTodos">
