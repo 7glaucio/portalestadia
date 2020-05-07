@@ -58,3 +58,26 @@ fetch("https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72")
         });
     });
 
+
+/* FUNÇÃO PARA SOMAR DIAS ENTRE DATAS */
+
+function setDate(){
+    var x = document.getElementById('dataEntrada').value; //"Pulling" the value entered 
+    console.log(x);    
+}
+
+console.log(x);
+
+
+
+
+/*
+var date1 = new Date("06/30/2019");
+var date2 = new Date("07/30/2019");
+
+var Difference_In_Time = date2.getTime() - date1.getTime();
+var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+console.log(Difference_In_Days);
+
+document.getElementById('dataEntrada').value = dataEntrada;*/
