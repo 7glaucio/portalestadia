@@ -27,39 +27,39 @@ fetch("https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72")
             cardTodos.appendChild(div);
 
             // Texto que vai ser inserido na div do quarto
-            var p = document.createElement("p");
-            // Inserir texto no elemento p
-            p.innerHTML = cardTodo.name;
-
-            // Inserir texto na div
-            div.appendChild(p);
-            // Inserir div no elemento principal
-            cardTodos.appendChild(div);
-
-            // Texto que vai ser inserido na div do quarto
             var h6 = document.createElement("h6");
             // Inserir texto no elemento p
-            h6.innerHTML = `Tipo de Propriedade: <b>${cardTodo.property_type}</b>`;
+            h6.innerHTML = `${cardTodo.property_type}`;
 
             // Inserir texto na div
             div.appendChild(h6);
             // Inserir div no elemento principal
             cardTodos.appendChild(div);
 
-            // Texto que vai ser inserido na div do quarto
-            var h4 = document.createElement("h4");
-            // Inserir texto no elemento p
-            h4.innerHTML = `Preço por noite: <b>R$${cardTodo.price},00</b>`;
+             // Texto que vai ser inserido na div do quarto
+             var h4 = document.createElement("h4");
+             // Inserir texto no elemento p
+             h4.innerHTML = `R$ ${cardTodo.price},00 por noite`;
+ 
+             // Inserir texto na div
+             div.appendChild(h4);
+             // Inserir div no elemento principal
+             cardTodos.appendChild(div);
 
-            // Inserir texto na div
-            div.appendChild(h4);
-            // Inserir div no elemento principal
-            cardTodos.appendChild(div);
+             // Texto que vai ser inserido na div do quarto
+             var p = document.createElement("p");
+             // Inserir texto no elemento p
+             p.innerHTML = cardTodo.name;
+ 
+             // Inserir texto na div
+             div.appendChild(p);
+             // Inserir div no elemento principal
+             cardTodos.appendChild(div);
         });
     });
 
 
-/* FUNÇÃO PARA SOMAR DIAS ENTRE DATAS */
+/* FUNÇÃO PARA SOMAR DIAS ENTRE DATAS 
 
 function setDate(){
     var x = document.getElementById('dataEntrada').value; //"Pulling" the value entered 
