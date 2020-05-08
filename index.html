@@ -47,9 +47,9 @@
 						</span>
 
 						<div id="socialTopo">
-							<a href="contato.html"><img id="RedeSocialTopo" src="img/fb-topo.png" alt=""></a>
-							<a href="contato.html"><img id="RedeSocialTopo" src="img/insta-topo.png" alt=""></a>
-							<a href="contato.html"><img id="RedeSocialTopo" src="img/twitter-topo.png" alt=""></a>
+							<a href="#"><img id="RedeSocialTopo" src="img/fb-topo.png" alt=""></a>
+							<a href="#"><img id="RedeSocialTopo" src="img/insta-topo.png" alt=""></a>
+							<a href="#"><img id="RedeSocialTopo" src="img/twitter-topo.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -117,67 +117,41 @@
 						Exiba os resultados ordenados de acordo com o filtro mais adequado para sua pesquisa
 					</h3>
 				</div>
-			</div><br>
+			</div>
 
-			<div class="row">
-				<div class="col-md-6">
-					<form role="form" class="form-inline">
-						<div class="form-group">
-							<input type="text" class="form-control"
-								placeholder="Digite o local que deseja visitar a trabalho ou lazer" size="60" />
-						</div>
-						<button type="submit" class="btn btn-primary" id="pesquisarCidade" style="width: 145px">
+		</div><br>
+
+		<div id="barraPesquisa2">
+			<div class="row filtros">
+				<div class="col-md-6 formPesquisa">
+					<form role="form" class="formulario">
+						<input id="searchInput" placeholder="Digite para pesquisar" onkeyup="handleSearch()" />
+						<button class="btn btn-primary" id="pesquisaTitulo" onclick="pesquisaTitulo()">
 							Pesquisar
 						</button>
 					</form>
 				</div>
-				<div class="col-md-3">
-					<form role="form" class="form-inline">
-						<div class="form-group">
-							<input type="date" class="form-control" placeholder="Data de Entrada" id="dataEntrada" min="2020-05-01" max="2021-12-31" />
-						</div>
-						<button type="submit" class="btn btn-primary" id="botaoEntrada" value='Submit' onclick="setDate()">
-							Check-In
-						</button>
-					</form>
+
+				<div class="col-md-2 ordemAlfabetica">
+					<button class="btn btn-primary" onclick="ordemAlfabetica()">
+						Por Ordem Alfabética
+					</button>
 				</div>
-				<div class="col-md-3">
-					<form role="form" class="form-inline">
-						<div class="form-group">
-							<input type="date" class="form-control" placeholder="Data de Saída" id="dataSaida" min="2020-05-01" max="2021-12-31" />
-						</div>
-						<button type="submit" class="btn btn-primary" id="botaoSaida">
-							Check-Out
-						</button>
-					</form>
+
+				<div class="col-md-2">
+					<button class="btn btn-primary" onclick="ordemTipo()">
+						Por Tipo de Propriedade
+					</button>
+				</div>
+
+				<div class="col-md-2 ordemPreco">
+					<button class="btn btn-primary" onclick="ordemPreco()">
+						Pelo Menor Preço
+					</button>
 				</div>
 			</div>
 		</div>
-		<br>
 		<!--- FIM DA BARRA DE PESQUISA -->
-
-		<div class="row">
-			<div class="col-md-12 info__orders" align="center">
-			  <button class="info__orders--button" onclick="ordemAlfabetica()">
-				Por Ordem Alfabética
-			  </button>
-	
-			  <button class="info__orders--button" onclick="orderByType()">
-				Por Tipo de Propriedade
-			  </button>
-	
-			  <button class="info__orders--button" onclick="orderByPriceCrescent()">
-				Pelo Menor Valor
-			  </button>
-	
-			  <input
-				id="searchInput"
-				class="info__orders--button"
-				onkeyup="handleSearch()"
-				placeholder="Pesquisar pelo título"
-			  />
-			</div>
-		  </div>
 
 		<!--- INÍCIO DOS CARDS DE ANÚNCIOS -->
 		<div class="row cardTodos" id="cardTodos">
@@ -188,20 +162,20 @@
 			<div class="col-md-3">
 				<img alt="Logo do Portal Estadia" src="img/logo-estadia-footer.png" />
 				<div id="socialRodape">
-					<a href="contato.html"><img id="RedeSocialRodape" src="img/fb-topo.png" alt=""></a>
-					<a href="contato.html"><img id="RedeSocialRodape" src="img/insta-topo.png" alt=""></a>
-					<a href="contato.html"><img id="RedeSocialRodape" src="img/twitter-topo.png" alt=""></a>
+					<a href="#"><img id="RedeSocialRodape" src="img/fb-topo.png" alt=""></a>
+					<a href="#"><img id="RedeSocialRodape" src="img/insta-topo.png" alt=""></a>
+					<a href="#"><img id="RedeSocialRodape" src="img/twitter-topo.png" alt=""></a>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<h4><b>ESCRITÓRIO</b></h4>
-				<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Ribeirão Preto, SP
-				14080-110<br /> Telefone: (16) 3991-1993
+				<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Porto Real, SP
+				18010-100<br /> Telefone: (16) 3999-9999
 			</div>
 			<div class="col-md-3" id="linksFooter">
 				<h4><b>ATENDIMENTO</b></h4>
-				<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Ribeirão Preto, SP
-				14080-110<br /> Telefone: (16) 3991-1993
+				<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Porto Real, SP
+				18010-100<br /> Telefone: (16) 3999-9999
 			</div>
 			<div class="col-md-3" id="linksFooter">
 				<h4><b>MAPA DO SITE</b></h4>

@@ -1,69 +1,104 @@
-// Chamada da API
-fetch("https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72")
-    .then((response) => {
-        // Salvar e retornar resposta da requisição como Json
-        return response.json();
-    })
-    .then((data) => {
-        // Utilizar cada item presente da resposta
-        data.forEach((cardTodo) => {
+const api = "https://api.sheety.co/30b6e400-9023-4a15-8e6c-16aa4e3b1e72";
 
-            // Elemento principal
-            var cardTodos = document.getElementById("cardTodos");
+// Chamando o ID da DIV
+const cardTodos = document.querySelector("#cardTodos");
+let data = [];
 
-            // Nova div representando um quarto
-            var div = document.createElement("div");
-            // Definir classe da div
-            div.className = "item";
+// Chamando o Fetch na API
+async function buscaRegistros() {
+    let resposta = await fetch(api);
 
-            // Texto que vai ser inserido na div do quarto
-            var img = document.createElement("img");
-            // Inserir texto no elemento p
-            img.src = cardTodo.photo;
+    const dataResposta = await resposta.json();
+    return dataResposta;
+}
 
-            // Inserir texto na div
-            div.appendChild(img);
-            // Inserir div no elemento principal
-            cardTodos.appendChild(div);
+// Varrendo para renderizar
+function criarCards(cards) {
+    cardTodos.innerHTML = "";
+    cards.map(renderCard);
+}
 
-            // Texto que vai ser inserido na div do quarto
-            var h6 = document.createElement("h6");
-            // Inserir texto no elemento p
-            h6.innerHTML = `${cardTodo.property_type}`;
+// Criando as hospedagens
+function renderCard(card) {
+    var div = document.createElement("div");
+    div.className = "item";
 
-            // Inserir texto na div
-            div.appendChild(h6);
-            // Inserir div no elemento principal
-            cardTodos.appendChild(div);
+    var fotoPropriedade = document.createElement("img");
+    fotoPropriedade.src = card.photo;
 
-            // Texto que vai ser inserido na div do quarto
-            var h4 = document.createElement("h4");
-            // Inserir texto no elemento p
-            h4.innerHTML = `R$ ${cardTodo.price},00 por noite`;
+    var propriedadeTipo = document.createElement("p");
+    propriedadeTipo.id = "tipoPropriedade";
+    propriedadeTipo.innerHTML = card.property_type;
 
-            // Inserir texto na div
-            div.appendChild(h4);
-            // Inserir div no elemento principal
-            cardTodos.appendChild(div);
+    var nomePropriedade = document.createElement("p");
+    nomePropriedade.innerHTML = card.name;
+    nomePropriedade.id = "nomePropriedade";
 
-            // Texto que vai ser inserido na div do quarto
-            var p = document.createElement("p");
-            // Inserir texto no elemento p
-            p.innerHTML = cardTodo.name;
+    var precoPropriedade = document.createElement("p");
+    precoPropriedade.innerHTML = `R$ ${card.price},00 por noite`;
+    precoPropriedade.id = "precoPropriedade";
 
-            // Inserir texto na div
-            div.appendChild(p);
-            // Inserir div no elemento principal
-            cardTodos.appendChild(div);
-        });
+    div.appendChild(fotoPropriedade);
+    div.appendChild(propriedadeTipo);
+    div.appendChild(precoPropriedade);
+    div.appendChild(nomePropriedade);
+
+    cardTodos.appendChild(div);
+}
+
+// Função principal
+
+async function main() {
+    data = await buscaRegistros();
+
+    if (data[0]) {
+        criarCards(data);
+    }
+}
+
+main();
+
+// Ordenação Alfabética
+function ordemAlfabetica() {
+    data.sort(function (a, b) {
+        return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
     });
 
+    criarCards(data);
+}
 
-    function ordemAlfabetica() {
-        data.sort(function (a, b) {
-            return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
-        });
-    
-        data(cardTodo);
-    }
-    
+// Ordenação por Tipo
+function ordemTipo() {
+    data.sort(function (a, b) {
+        return a.property_type > b.property_type
+            ? 1
+            : b.property_type > a.property_type
+                ? -1
+                : 0;
+    });
+
+    criarCards(data);
+}
+
+// Ordenação por Preço
+function ordemPreco() {
+    data.sort(function (a, b) {
+        return a.price > b.price ? 1 : b.price > a.price ? -1 : 0;
+    });
+    criarCards(data);
+}
+
+// Pesquisar por Título
+function handleSearch() {
+    let valueInput = document.querySelector("#searchInput").value.toUpperCase();
+  
+    const filteredResults = data.filter((places) => {
+      const placesToSearchByName = places.name.toUpperCase();
+  
+      if (placesToSearchByName.search(valueInput) > -1) {
+        return places;
+      }
+    });
+  
+    criarCards(filteredResults);
+  }
