@@ -8,11 +8,11 @@ body {
 
 /* TOPO DO SITE */
 
-#header {
+.header {
     margin: 20px;
 }
 
-#menu {
+.menu {
     justify-content: end;
     font-size: 120%;
     margin-bottom: -10px;
@@ -27,7 +27,7 @@ body {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
-#slogan {
+.slogan {
     font-family: monospace;
     font-weight: bold;
     font-size: 105%;
@@ -35,13 +35,13 @@ body {
     font-style: italic;
 }
 
-#socialTopo{
+.socialTopo{
     margin-right: -210px;
     margin-top: -2px;
     float: right;
 }
 
-#RedeSocialTopo{
+.RedeSocialTopo{
     max-width: 9%;
     animation-name: rodaSocial;
     animation-duration: 1s;  
@@ -81,7 +81,7 @@ body {
 
 /* BARRA DE PESQUISA DE HOSPEDAGEM */
 
-#barraPesquisa2 {
+.barraPesquisa {
     margin-left: 50px;
     margin-right: -8px;
 }
@@ -231,7 +231,7 @@ body {
 }
 
 /* RODAPÉ E COPYRIGHT */
-#footer {
+.footer {
     margin-top: 20px;
     flex: auto;
     background-color: #666666;
@@ -242,26 +242,26 @@ body {
     border-top: 2px solid orange;
 }
 
-#socialRodape{
+.socialRodape{
     padding-top: 8px;
     margin-right: -160px;
     margin-top: 8px;
     float: right;
 }
 
-#RedeSocialRodape{
+.RedeSocialRodape{
     max-width: 9%;  
 }
 
-#linksFooter > a:link {
+.linksFooter > a:link {
     color: white;
 }
 
-#linksFooter > a:visited {
+.linksFooter > a:visited {
     color: white;
 }  
 
-#copyright {
+.copyright {
     background-color: #0275D8;
     color: white;
     font-weight: bold;

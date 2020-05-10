@@ -8,7 +8,7 @@
 
 	<title>Portal Estadia</title>
 
-	<meta name="description" content="Site inspirado no portal Airbnb">
+	<meta name="description" content="Site de hospedagem levemente inspirado no Airbnb">
 	<meta name="author" content="Glaucio Oliveira">
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,42 +19,42 @@
 <body>
 
 	<div class="container-fluid">
+		<header> <!--- HEADER -->
 		<div class="row">
-			<!--- HEADER -->
 			<div class="col-md-12">
-				<div class="row" id="header">
-					<div class="col-md-6">
-						<img alt="Logo do Portal Estadia" src="img/logo-estadia.png">
-					</div>
-					<div class="col-md-6" id="menu">
-						<ul class="nav nav-pills">
-							<li class="nav-item">
-								<a class="nav-link active" href="#">Início</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Nossos Serviços</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Institucional</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Atendimento</a>
-							</li>
-						</ul>
+					<div class="row header">
+						<div class="col-md-6">
+							<img alt="Logo do Portal Estadia" src="img/logo-estadia.png">
+						</div>
+						<div class="col-md-6 menu">
+							<ul class="nav nav-pills">
+								<li class="nav-item">
+									<a class="nav-link active" href="#">Início</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Nossos Serviços</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Institucional</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Atendimento</a>
+								</li>
+							</ul>
 
-						<span id="slogan">
-							Encontre seu lugar, esteja onde estiver!
-						</span>
+							<span class="slogan">
+								Encontre seu lugar, esteja onde estiver!
+							</span>
 
-						<div id="socialTopo">
-							<a href="#"><img id="RedeSocialTopo" src="img/fb-topo.png" alt=""></a>
-							<a href="#"><img id="RedeSocialTopo" src="img/insta-topo.png" alt=""></a>
-							<a href="#"><img id="RedeSocialTopo" src="img/twitter-topo.png" alt=""></a>
+							<div class="socialTopo">
+								<a href="#"><img class="RedeSocialTopo" src="img/fb-topo.png" alt=""></a>
+								<a href="#"><img class="RedeSocialTopo" src="img/insta-topo.png" alt=""></a>
+								<a href="#"><img class="RedeSocialTopo" src="img/twitter-topo.png" alt=""></a>
+							</div>
 						</div>
 					</div>
-				</div>
 			</div>
-		</div>
+		</div></header>
 
 		<!--- CARROSSEL DE IMAGENS -->
 		<div class="row">
@@ -110,7 +110,7 @@
 		<!--- FIM DO CARROSSEL -->
 
 		<!--- INÍCIO DA BARRA DE PESQUISA -->
-		<div id="barraPesquisa">
+		<div class="antesPesquisa">
 			<div class="row">
 				<div class="col-md-12">
 					<h3 class="text-primary" align="center">
@@ -121,7 +121,7 @@
 
 		</div><br>
 
-		<div id="barraPesquisa2">
+		<div class="barraPesquisa">
 			<div class="row filtros">
 				<div class="col-md-6 formPesquisa">
 					<form role="form" class="formulario">
@@ -153,48 +153,51 @@
 		</div>
 		<!--- FIM DA BARRA DE PESQUISA -->
 
-		<!--- INÍCIO DOS CARDS DE ANÚNCIOS -->
+		<!--- CARDS DE ANÚNCIOS -->
 		<div class="row cardTodos" id="cardTodos">
 		</div>
 
 		<!--- INÍCIO DO RODAPÉ -->
-		<div class="row" id="footer">
-			<div class="col-md-3">
-				<img alt="Logo do Portal Estadia" src="img/logo-estadia-footer.png" />
-				<div id="socialRodape">
-					<a href="#"><img id="RedeSocialRodape" src="img/fb-topo.png" alt=""></a>
-					<a href="#"><img id="RedeSocialRodape" src="img/insta-topo.png" alt=""></a>
-					<a href="#"><img id="RedeSocialRodape" src="img/twitter-topo.png" alt=""></a>
+		<footer>
+			<div class="row footer">
+				<div class="col-md-3">
+					<img alt="Logo do Portal Estadia" src="img/logo-estadia-footer.png" />
+					<div class="socialRodape">
+						<a href="#"><img class="RedeSocialRodape" src="img/fb-topo.png" alt=""></a>
+						<a href="#"><img class="RedeSocialRodape" src="img/insta-topo.png" alt=""></a>
+						<a href="#"><img class="RedeSocialRodape" src="img/twitter-topo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<h4><b>ESCRITÓRIO</b></h4>
+					<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Porto Real, SP
+					18010-100<br /> Telefone: (16) 3999-9999
+				</div>
+				<div class="col-md-3 linksFooter">
+					<h4><b>ATENDIMENTO</b></h4>
+					<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Porto Real, SP
+					18010-100<br /> Telefone: (16) 3999-9999
+				</div>
+				<div class="col-md-3 linksFooter">
+					<h4><b>MAPA DO SITE</b></h4>
+					<a href="#">
+						Página Inicial
+					</a><br>
+					<a href="#">
+						Institucional
+					</a><br>
+					<a href="#">
+						Nossos Serviços
+					</a><br>
+					<a href="#">
+						Fale Conosco
+					</a>
 				</div>
 			</div>
-			<div class="col-md-3">
-				<h4><b>ESCRITÓRIO</b></h4>
-				<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Porto Real, SP
-				18010-100<br /> Telefone: (16) 3999-9999
-			</div>
-			<div class="col-md-3" id="linksFooter">
-				<h4><b>ATENDIMENTO</b></h4>
-				<strong>Central do Portal Estadia</strong><br /> Avenida das Bandeiras, 600<br /> Porto Real, SP
-				18010-100<br /> Telefone: (16) 3999-9999
-			</div>
-			<div class="col-md-3" id="linksFooter">
-				<h4><b>MAPA DO SITE</b></h4>
-				<a href="#">
-					Página Inicial
-				</a><br>
-				<a href="#">
-					Institucional
-				</a><br>
-				<a href="#">
-					Nossos Serviços
-				</a><br>
-				<a href="#">
-					Fale Conosco
-				</a>
-			</div>
-		</div>
+		</footer>
 		<!--- FIM DO RODAPÉ -->
-		<div class="row" id="copyright">
+
+		<div class="row copyright">
 			<div class="col-md-12" align="center">
 				Desenvolvido por <a href="http://focanainternet.com.br" style="color:white">Foca na Internet</a> © 2020
 				® Todos os direitos reservados.
