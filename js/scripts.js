@@ -58,7 +58,7 @@ async function main() {
 
 main();
 
-// Ordenação Alfabética
+////////////////////  Ordenação Alfabética
 function ordemAlfabetica() {
     data.sort(function (a, b) {
         return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
@@ -67,7 +67,7 @@ function ordemAlfabetica() {
     criarCards(data);
 }
 
-// Ordenação por Tipo
+////////////////////  Ordenação por Tipo
 function ordemTipo() {
     data.sort(function (a, b) {
         return a.property_type > b.property_type
@@ -80,7 +80,7 @@ function ordemTipo() {
     criarCards(data);
 }
 
-// Ordenação por Preço
+//////////////////// Ordenação por Preço
 function ordemPreco() {
     data.sort(function (a, b) {
         return a.price > b.price ? 1 : b.price > a.price ? -1 : 0;
@@ -88,7 +88,7 @@ function ordemPreco() {
     criarCards(data);
 }
 
-// Pesquisar por Título
+////////////////////  Pesquisa Digitando Palavras-Chave
 function handleSearch() {
     let valueInput = document.querySelector("#searchInput").value.toUpperCase();
   

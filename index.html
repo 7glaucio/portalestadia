@@ -19,9 +19,10 @@
 <body>
 
 	<div class="container-fluid">
-		<header> <!--- HEADER -->
-		<div class="row">
-			<div class="col-md-12">
+		<header>
+			<!--- HEADER -->
+			<div class="row">
+				<div class="col-md-12">
 					<div class="row header">
 						<div class="col-md-6">
 							<img alt="Logo do Portal Estadia" src="img/logo-estadia.png">
@@ -46,15 +47,16 @@
 								Encontre seu lugar, esteja onde estiver!
 							</span>
 
-							<div class="socialTopo">
-								<a href="#"><img class="RedeSocialTopo" src="img/fb-topo.png" alt=""></a>
-								<a href="#"><img class="RedeSocialTopo" src="img/insta-topo.png" alt=""></a>
-								<a href="#"><img class="RedeSocialTopo" src="img/twitter-topo.png" alt=""></a>
+							<div class="redesSociaisTopo">
+								<a href="#"><img class="iconeSocialTopo" src="img/fb-topo.png" alt=""></a>
+								<a href="#"><img class="iconeSocialTopo" src="img/insta-topo.png" alt=""></a>
+								<a href="#"><img class="iconeSocialTopo" src="img/twitter-topo.png" alt=""></a>
 							</div>
 						</div>
 					</div>
+				</div>
 			</div>
-		</div></header>
+		</header>
 
 		<!--- CARROSSEL DE IMAGENS -->
 		<div class="row">
@@ -123,19 +125,21 @@
 
 		<div class="barraPesquisa">
 			<div class="row filtros">
-				<div class="col-md-6 formPesquisa">
-					<form role="form" class="formulario">
-						<input id="searchInput" placeholder="Digite para pesquisar" onkeyup="handleSearch()" />
-						<button class="btn btn-primary" id="pesquisaTitulo" onclick="pesquisaTitulo()">
-							Pesquisar
-						</button>
-					</form>
-				</div>
 
 				<div class="col-md-2 ordemAlfabetica">
 					<button class="btn btn-primary" onclick="ordemAlfabetica()">
 						Por Ordem Alfabética
 					</button>
+				</div>
+
+				<div class="col-md-6 formPesquisa">
+					<form role="form" class="formulario">
+						<input id="searchInput" placeholder="  Digite aqui detalhes do local onde deseja se hospedar"
+							size="70%" onkeyup="handleSearch()" />
+						<button class="btn btn-primary" id="pesquisaTitulo" onclick="pesquisaTitulo()">
+							Pesquisar
+						</button>
+					</form>
 				</div>
 
 				<div class="col-md-2">
@@ -149,6 +153,7 @@
 						Pelo Menor Preço
 					</button>
 				</div>
+
 			</div>
 		</div>
 		<!--- FIM DA BARRA DE PESQUISA -->
@@ -162,10 +167,10 @@
 			<div class="row footer">
 				<div class="col-md-3">
 					<img alt="Logo do Portal Estadia" src="img/logo-estadia-footer.png" />
-					<div class="socialRodape">
-						<a href="#"><img class="RedeSocialRodape" src="img/fb-topo.png" alt=""></a>
-						<a href="#"><img class="RedeSocialRodape" src="img/insta-topo.png" alt=""></a>
-						<a href="#"><img class="RedeSocialRodape" src="img/twitter-topo.png" alt=""></a>
+					<div class="redesSociaisRodape">
+						<a href="#"><img class="iconeSocialRodape" src="img/fb-topo.png" alt=""></a>
+						<a href="#"><img class="iconeSocialRodape" src="img/insta-topo.png" alt=""></a>
+						<a href="#"><img class="iconeSocialRodape" src="img/twitter-topo.png" alt=""></a>
 					</div>
 				</div>
 				<div class="col-md-3">
